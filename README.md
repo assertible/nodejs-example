@@ -1,6 +1,6 @@
 # Continuous testing example - Node.js
 
-[![CircleCI](https://circleci.com/gh/assertible/nodejs-example.svg?style=svg)](https://circleci.com/gh/assertible/nodejs-example) [![Assertible](https://assertible.com/apis/3cf53b60-235a-4431-9a2d-2d60823d23b9/status?api_token=IGTuOsfwTu9l9tLb)]
+[![Heroku](https://heroku-badge.herokuapp.com/?app=assertible-nodejs-example)](https://assertible-nodejs-example.herokuapp.com/) [![CircleCI](https://circleci.com/gh/assertible/nodejs-example.svg?style=svg&circle-token=54502d43ebe83668441acb3636e4e3eebf2b0fd9)](https://circleci.com/gh/assertible/nodejs-example) [![Service status](https://assertible.com/apis/3cf53b60-235a-4431-9a2d-2d60823d23b9/status?api_token=8b55a286830323effb)](https://assertible.com/dashboard#/services/3cf53b60-235a-4431-9a2d-2d60823d23b9)
 
 This is an example of a complete continuous **integration**,
 **delivery**, and **testing** pipeline using a Node.js app.  The
