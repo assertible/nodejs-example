@@ -25,3 +25,17 @@ deployment:
 
       # Deploy the app to heroku
       - git push git@heroku.com:assertible-nodejs-example.git $CIRCLE_SHA1:refs/heads/master
+
+
+      # Download github_deploy script
+      - curl https://raw.githubusercontent.com/assertible/deployments/master/github_deploy > github_deploy
+      - chmod +x github_deploy
+
+
+      # Send a deployment event to GitHub. GitHub will then send that
+      # event to Assertible, and Assertible will run your API tests.
+      - |
+        APPROOT=https://assertible-nodejs-example.herokuapp.com/
+        DEPLOY_ID=$(ENVIRONMENT_NAME="production" ./github_deploy $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "pending")
+        echo "GitHub deployment id: $DEPLOY_ID"
+        ./github_deploy.sh $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "success" $DEPLOY_ID
