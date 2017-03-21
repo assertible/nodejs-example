@@ -1,3 +1,27 @@
 machine:
   node:
     version: 4.5.0
+
+deployment:
+  production:
+    branch: master
+    commands:
+
+      # The following few lines set up the heroku-toolbet CLI so we
+      # can deploy the app. Read more in the CircleCI docs:
+      # https://circleci.com/docs/1.0/continuous-deployment-with-heroku/
+      - |
+        cat >~/.netrc <<EOF
+        machine api.heroku.com
+          login $HEROKU_EMAIL
+          password $HEROKU_TOKEN
+        machine git.heroku.com
+          login $HEROKU_EMAIL
+          password $HEROKU_TOKEN
+        EOF
+      - chmod 600 ~/.netrc # Heroku cli complains about permissions without this
+      # - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
+
+
+      # Deploy the app to heroku
+      - git push git@heroku.com:assertible-nodejs-example.git $CIRCLE_SHA1:refs/heads/master
