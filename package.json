@@ -4,7 +4,7 @@
   "description": "A continuous integration, delivery, and testing example for a Node.js app",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js",
+    "test": "mocha test/index.js",
     "start": "node index.js"
   },
   "repository": {
