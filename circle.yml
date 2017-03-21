@@ -20,7 +20,7 @@ deployment:
           password $HEROKU_TOKEN
         EOF
       - chmod 600 ~/.netrc # Heroku cli complains about permissions without this
-      # - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
+      - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
 
 
       # Deploy the app to heroku
