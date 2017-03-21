@@ -8,7 +8,7 @@ app.set('port', (process.env.PORT || 5000))
 
 /* Handler for "/" */
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  response.send('Hello, world!')
 })
 
 
