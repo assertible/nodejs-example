@@ -38,4 +38,4 @@ deployment:
         APPROOT=https://assertible-nodejs-example.herokuapp.com/
         DEPLOY_ID=$(ENVIRONMENT_NAME="production" ./github_deploy $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "pending")
         echo "GitHub deployment id: $DEPLOY_ID"
-        ./github_deploy.sh $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "success" $DEPLOY_ID
+        ./github_deploy $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "success" $DEPLOY_ID
