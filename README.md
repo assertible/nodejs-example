@@ -7,8 +7,6 @@ This is an example of a complete continuous **integration**,
 project demonstrates how you can integrate Assertible into your
 deployment pipeline for running automated, post-deployment API tests.
 
-Read the full blog post here: []()
-
 ## Introduction
 
 A continuous integration and delivery pipeline makes teams and
