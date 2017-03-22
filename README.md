@@ -28,7 +28,7 @@ developers automate their QA tests and complete their CI pipeline.
 
 Read the accompanying blog post to the
 repo:
-[https://assertible.com/blog/set-up-continuous-testing-with-nodejs](Tutorial: Set up a continuous testing pipeline with Node.js)
+[Tutorial: Set up a continuous testing pipeline with Node.js](https://assertible.com/blog/set-up-continuous-testing-with-nodejs)
 
 ## Documentation and resources
 
