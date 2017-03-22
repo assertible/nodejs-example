@@ -16,9 +16,6 @@ developers more effective and building and deploying code. But many
 teams haven't added continuous testing to their workflow, and resort
 to manually testing applications after every deployment.
 
-At Assertible, we've created a continuous testing platform to help
-developers automate their QA tests and complete their CI pipeline.
-
 **The ideal workflow**
 
 - Push code to GitHub
@@ -26,13 +23,26 @@ developers automate their QA tests and complete their CI pipeline.
 - Deploy the new application to Heroku
 - Run post-deployment tests with Assertible
 
+At Assertible, we've created a continuous testing platform to help
+developers automate their QA tests and complete their CI pipeline.
+
+Read the accompanying blog post to the
+repo:
+[https://assertible.com/blog/set-up-continuous-testing-with-nodejs](Tutorial: Set up a continuous testing pipeline with Node.js)
+
 ## Documentation and resources
 
-Read the full blog post for the code in this repo [here](). For more
-information about setting up continuous test, see the Assertible User
-Guide:
+- [Getting started with assertible](https://assertible.com/docs)
+- [GitHub deployments API](https://developer.github.com/v3/repos/deployments/)
+- [assertible/deployments repo and scripts](https://github.com/assertible/deployments)
 
-- [Getting started with assertible]()
-- [Why we test every single API deployment]()
-- [5 tools to complete your CI pipeline]()
-- [assertible/deployments repo and scripts]()
+## License
+
+The code in this repository is licensed under
+MIT. [View the license](https://github.com/assertible/deployments/blob/master/LICENSE)
+
+---
+
+> [assertible.com](http://assertible.com) &nbsp;&middot;&nbsp;
+> GitHub [@assertible](https://github.com/assertible) &nbsp;&middot;&nbsp;
+> Twitter [@AssertibleApp](https://twitter.com/AssertibleApp)
