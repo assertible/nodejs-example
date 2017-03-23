@@ -1,6 +1,8 @@
-# Continuous testing example - Node.js
+# Continuous testing pipeline example - Node.js
 
 [![Heroku](https://heroku-badge.herokuapp.com/?app=assertible-nodejs-example)](https://assertible-nodejs-example.herokuapp.com/) [![CircleCI](https://circleci.com/gh/assertible/nodejs-example.svg?style=svg&circle-token=54502d43ebe83668441acb3636e4e3eebf2b0fd9)](https://circleci.com/gh/assertible/nodejs-example) [![Service status](https://assertible.com/apis/3cf53b60-235a-4431-9a2d-2d60823d23b9/status?api_token=8b55a286830323effb)](https://assertible.com/dashboard#/services/3cf53b60-235a-4431-9a2d-2d60823d23b9)
+
+**[Tutorial: Set up a continuous testing pipeline with Node.js](https://assertible.com/blog/set-up-continuous-testing-with-nodejs)** 
 
 This is an example of a complete continuous **integration**,
 **delivery**, and **testing** pipeline using a Node.js app.  The
@@ -24,12 +26,9 @@ to manually testing applications after every deployment.
 At Assertible, we've created a continuous testing platform to help
 developers automate their QA tests and complete their CI pipeline.
 
-Read the accompanying blog post to the
-repo:
-[Tutorial: Set up a continuous testing pipeline with Node.js](https://assertible.com/blog/set-up-continuous-testing-with-nodejs)
-
 ## Documentation and resources
 
+- [Tutorial for this example](https://assertible.com/blog/set-up-continuous-testing-with-nodejs)
 - [Getting started with assertible](https://assertible.com/docs)
 - [GitHub deployments API](https://developer.github.com/v3/repos/deployments/)
 - [assertible/deployments repo and scripts](https://github.com/assertible/deployments)
