@@ -1,6 +1,6 @@
 # Continuous testing pipeline example - Node.js
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=assertible-nodejs-example)](https://assertible-nodejs-example.herokuapp.com/) [![CircleCI](https://circleci.com/gh/assertible/nodejs-example.svg?style=svg&circle-token=54502d43ebe83668441acb3636e4e3eebf2b0fd9)](https://circleci.com/gh/assertible/nodejs-example) [![Service status](https://assertible.com/apis/3cf53b60-235a-4431-9a2d-2d60823d23b9/status?api_token=8b55a286830323effb)](https://assertible.com/)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=assertible-nodejs-example)](https://assertible-nodejs-example.herokuapp.com/) [![CircleCI](https://circleci.com/gh/assertible/nodejs-example.svg?style=svg&circle-token=54502d43ebe83668441acb3636e4e3eebf2b0fd9)](https://circleci.com/gh/assertible/nodejs-example) [![Service status](https://assertible.com/apis/1ffc0c9d-d1e7-47c2-b4d1-62bae28791fb/status?api_token=8b55a286830323effb)](https://assertible.com/)
 
 **[Tutorial: Set up a continuous testing pipeline with Node.js](https://assertible.com/blog/set-up-continuous-testing-with-nodejs)** 
 
