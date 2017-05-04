@@ -26,7 +26,7 @@ deployment:
 
       - |
         curl -u $ASSERTIBLE_TOKEN: -XPOST --fail "https://assertible.com/deployments" -d'{
-          "service": "'"${ASSERTIBLE_SERVICE}"'",
+          "service": "'"${ASSERTIBLE_SERVICE_ID}"'",
           "environmentName": "production",
           "version": "'"${CIRCLE_SHA1}"'",
           "ref": "'"${CIRCLE_SHA1}"'",
