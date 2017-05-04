@@ -6,7 +6,6 @@ deployment:
   production:
     branch: master
     commands:
-
       # The following few lines set up the heroku-toolbet CLI so we
       # can deploy the app. Read more in the CircleCI docs:
       # https://circleci.com/docs/1.0/continuous-deployment-with-heroku/
@@ -22,20 +21,14 @@ deployment:
       - chmod 600 ~/.netrc # Heroku cli complains about permissions without this
       - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
 
-
       # Deploy the app to heroku
       - git push git@heroku.com:assertible-nodejs-example.git $CIRCLE_SHA1:refs/heads/master
 
-
-      # Download github_deploy script
-      - curl https://raw.githubusercontent.com/assertible/deployments/master/github_deploy > github_deploy
-      - chmod +x github_deploy
-
-
-      # Send a deployment event to GitHub. GitHub will then send that
-      # event to Assertible, and Assertible will run your API tests.
       - |
-        APPROOT=https://assertible-nodejs-example.herokuapp.com/
-        DEPLOY_ID=$(ENVIRONMENT_NAME="production" ./github_deploy $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "pending")
-        echo "GitHub deployment id: $DEPLOY_ID"
-        ./github_deploy $CIRCLE_SHA1 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $APPROOT "success" $DEPLOY_ID
+        curl -u $ASSERTIBLE_TOKEN: -XPOST --fail "https://assertible.com/deployments" -d'{
+          "service": "'"${ASSERTIBLE_SERVICE}"'",
+          "environmentName": "production",
+          "version": "'"${CIRCLE_SHA1}"'",
+          "ref": "'"${CIRCLE_SHA1}"'",
+          "github": true
+        }'
