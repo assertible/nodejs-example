@@ -12,6 +12,14 @@ app.get('/', function(request, response) {
     response.send('Hello, world!')
 })
 
+/* Handler for "/json" JSON response */
+app.get('/json', function(request, response) {
+    response.setHeader('Content-Type', 'application/json')
+    response.send({
+        a: 1,
+        b: 2
+    })
+})
 
 /* Initialize the server */
 const server = app.listen(app.get('port'), function() {
